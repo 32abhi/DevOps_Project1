@@ -10,8 +10,8 @@ RUN apt update && \
     apt clean
 
 # Set default python and pip
-RUN ln -s /usr/bin/python3 /usr/bin/python && \
-    ln -s /usr/bin/pip3 /usr/bin/pip
+RUN ln -sf /usr/bin/python3 /usr/bin/python && \
+    ln -sf /usr/bin/pip3 /usr/bin/pip
 
 # Create a working directory
 WORKDIR /app
